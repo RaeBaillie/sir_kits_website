@@ -16,33 +16,15 @@ const products = [
     },
 ];
 
-function ProductDisplay(id, name, image, description) {
-    return (
-        <>
-          <button>
-            <img src={image} alt={name} />
-            <div className="info">
-              <div className="description">{description}</div>
-              <div className="name">{name}</div>
-            </div>
-          </button>
-        </>
-      );
-}
-
 function Products() {
-    return(
-        <div classname = 'Product_List'>
+    return (
+        <div className='Products'>
             {
-                products.map(({
-                id, name, image, description,
-                }) => (
-                <ProductDisplay
-                    id={id}
-                    name={name}
-                    desc={description}
-                    image={image}
-                />
+                products.map((product) => (
+                    <div>
+                        <div className="desc">{product.name}</div>
+                        <div className="name">{product.description}</div>
+                    </div>
                 ))
             }
         </div>
