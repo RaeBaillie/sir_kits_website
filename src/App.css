@@ -1,18 +1,52 @@
 .App {
   background-color: #8a3017;
   font-family: "Times New Roman", Times, serif;
-}
-
-.Intro {
-  width: 1000px;
-  border: 15px solid rgb(43, 13, 1);
   padding: 50px;
-  margin: 20px;
-  h1 {
-    text-align: center;
+  .Intro {
+    margin: auto;
+    margin-bottom: 40px;
+    width: 50%;
+    border: 7px solid #282c34;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    h1 {
+      text-align: center;
+    }
   }
-  p {
-    text-align: left;
+  .Products {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+    background-color: #282c34;
+    border: 10px solid #282c34;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    .Product {
+      display: flex;
+      flex-direction: row;
+      .Info {
+        padding: 1%;
+      }
+    }
+  }
+  .Team {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+    background-color: #282c34;
+    border: 10px solid #282c34;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    .Person {
+      display: flex;
+      flex-direction: row;
+    }
+    img {
+      background-color: white;
+    }
   }
 }
 

@@ -1,17 +1,16 @@
 import './App.css';
-import blank from './blank.png';
 
 const products = [
     {
         id: 0,
         name: 'Product1',
-        image: blank,
+        image: '/blank.png',
         description: "blah blah blah"
     },
     {
         id: 1,
         name: 'Product2',
-        image: blank,
+        image: '/blank.png',
         description: "very good product to buy"
     },
 ];
@@ -21,9 +20,12 @@ function Products() {
         <div className='Products'>
             {
                 products.map((product) => (
-                    <div>
-                        <div className="desc">{product.name}</div>
-                        <div className="name">{product.description}</div>
+                    <div className='Product' key={product.id}>
+                        <img src={product.image} alt={product.name}></img>
+                        <div className='Info'>
+                            <div className="name">{product.name}</div>
+                            <div className="desc">{product.description}</div>
+                        </div>
                     </div>
                 ))
             }

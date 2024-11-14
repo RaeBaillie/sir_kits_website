@@ -1,17 +1,15 @@
-import blank from './blank.png';
-
 const team = [
     {
         id: 0,
         name: 'Rae Baillie',
-        image: blank,
+        image: './blank.png',
         description: "blah blah blah",
         link: "www.linkedin.com/in/rae-baillie-49b884334"
     },
     {
         id: 1,
         name: 'Lehan Jones',
-        image: blank,
+        image: './blank.png',
         description: "very good product to buy",
         link: null
     },
@@ -22,9 +20,12 @@ function Team() {
         <div className='Team'>
             {
                 team.map((person) => (
-                    <div>
-                        <div className="desc">{person.name}</div>
-                        <div className="name">{person.description}</div>
+                    <div className='Person'>
+                        <img src={person.image} alt={person.name}></img>
+                        <div className='Info'>
+                            <div className="desc">{person.name}</div>
+                            <div className="name">{person.description}</div>
+                        </div>
                     </div>
                 ))
             }
