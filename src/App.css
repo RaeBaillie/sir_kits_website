@@ -1,6 +1,6 @@
 .App {
   background-color: #8a3017;
-  font-family: "Times New Roman", Times, serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
   padding: 50px;
   .Intro {
     margin: auto;
@@ -43,6 +43,10 @@
     .Person {
       display: flex;
       flex-direction: row;
+      flex-grow: 1;
+      .Info {
+        padding: 1%
+      }
     }
     img {
       background-color: white;
